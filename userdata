@@ -1,0 +1,8 @@
+#!/bin/bash
+	cd /opt 
+	sudo wget -c http://wordpress.org/latest.tar.gz
+	sudo tar -xvzf latest.tar.gz
+	cd /opt/wordpress
+	sudo mv wp-config-sample.php wp-config.php 
+	sudo cp -R /opt/wordpress/* /var/www/html
+	sudo chown -R www-data:www-data /var/www/html
